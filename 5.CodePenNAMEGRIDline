@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="header"> Header</div>
+  <div class="small-box-1">Small box 1</div>
+  <div class="small-box-2">Small box 2</div>
+  <div class="small-box-3">Small box 3</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="main-content">Main content</div>
+  <div class="footer">Footer</div>
+</div>
+
+.container{
+  background-color: #eee;
+  width: 1000px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-rows:[header-start] 100px [header-end box-start]  200px [box-end main-start] repeat(2, 200px)  [main-end footer-start]100px [footer-end];
+  
+  grid-template-columns: repeat(3, [col-start] 3fr [col-end]) 2fr [grid-end];
+  // grid-row-gap: 30px;
+  // grid-column-gap: 200px;
+  grid-gap: 30px;
+  color: white;
+  font-size: 30px;
+  
+  & > * {
+    background-color: orangered;
+  }
+  
+}
+ .header{
+    grid-column: col-start 1 / grid-end;
+   //grid-row:
+}
+
+.sidebar{
+ grid-column: col-end 3 / grid-end;
+  grid-row: box-start/main-end;
+}
+.main-content{
+  grid-column: 1/4;
+  grid-row: main-start/main-end;
+}
+.footer{
+ grid-column: col-start 1 /grid-end;
+}
+

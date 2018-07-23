@@ -1,0 +1,10 @@
+In yellow book under expansion 
+
+simplify 
+
+
+Difference 
+
+for end row/ column
+span  #
+-1

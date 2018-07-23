@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="item item--1">Modern</div>
+  <div class="item item--2">CSS</div>
+  <div class="item item--3">with</div>
+  <div class="item item--4">Flexbox</div>
+  <div class="item item--5">and </div>
+  <div class="item item--6">Grid</div>
+  <div class="item item--7">is</div>
+  <div class="item item--8">Great</div>
+</div>
+
+.container{
+  background-color: #eee;
+  width: 90%;
+  //height: 1000px;
+  margin: 20px auto;
+  
+   display: grid;
+  // Using auto-fill and autofit
+  grid-template-rows: repeat(2, minmax(150px, min-content));
+  grid-template-columns:repeat(auto-fill, 150px);
+  grid-auto-rows: minmax(150px, min-content);
+}
+.item{
+  padding: 10px;
+  color: white;
+  font-size: 24px;
+    &--1{
+        background-color: orangered; 
+    }
+    &--2{ 
+      background-color: yellowgreen;
+    }
+    &--3{ 
+      background-color: blueviolet;
+    }
+    &--4{ 
+      background-color: palevioletred;
+    }
+    &--5{  
+      background-color: royalblue
+    }
+    &--6{ 
+      background-color: goldenrod;
+    }
+    &--7{
+      background-color: crimson;
+    }
+      &--8{
+       background-color: darkslategrey;
+    }
+}

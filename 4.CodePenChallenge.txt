@@ -1,0 +1,51 @@
+CODE CHALLENGE 
+completed in 25min
+
+<div class="container">
+  <div class="item item--1"> Header</div>
+  <div class="item item--2">Small box 1</div>
+  <div class="item item--3">Small box 2</div>
+  <div class="item item--4">Small box 3</div>
+  <div class="item item--5">Sidebar</div>
+  <div class="item item--6">Main content</div>
+  <div class="item item--7">Footer</div>
+</div>
+
+.container{
+  background-color: #eee;
+  width: 1000px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-rows: 100px repeat(3, 200px) 100px;
+  grid-template-columns: repeat(3, 3fr) 2fr ;
+  // grid-row-gap: 30px;
+  // grid-column-gap: 200px;
+  grid-gap: 30px;
+  color: white;
+  font-size: 30px;
+  
+}
+.item{
+  background-color: orangered;
+  &--1{
+    grid-column: 1/-1;
+   //grid-row:
+}
+&--2{
+}
+&--3{
+}
+&--4{
+}
+&--5{
+ grid-column: 4/5;
+  grid-row: 2/5;
+}
+&--6{
+  grid-column: 1/4;
+  grid-row: 3/5;
+}
+&--7{
+ grid-column: 1/-1;
+}
+}

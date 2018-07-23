@@ -1,0 +1,53 @@
+//EASIES METHOD  for simple layouts 
+
+<div class="container">
+  <div class="header"> Header</div>
+  <div class="small-box-1">Small box 1</div>
+  <div class="small-box-2">Small box 2</div>
+  <div class="small-box-3">Small box 3</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="main-content">Main content</div>
+  <div class="footer">Footer</div>
+</div>
+
+
+.container{
+  background-color: #eee;
+  width: 1000px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-rows: 100px    repeat(3, 200px)  100px;
+  grid-template-columns: repeat(3, 3fr) 2fr ;
+  // grid-row-gap: 30px;
+  // grid-column-gap: 200px;
+  grid-gap: 30px;
+  color: white;
+  font-size: 30px;
+  
+  // must be a complete repesentation 
+  // . -- is an empty cell
+  grid-template-areas: "head head head head"
+                      "box1  box2  box3  side"
+                      "main main main side"
+                      "main main main side"
+                      ". foot foot .";
+  
+  & > * {
+    background-color: orangered;
+  }
+  
+}
+ .header{
+ grid-area: head;
+}
+
+.sidebar{
+grid-area: side;
+}
+.main-content{
+grid-area: main;
+}
+.footer{
+  grid-area: foot;
+}
+
