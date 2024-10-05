@@ -3,13 +3,12 @@
   grid-column: center-start/ center-end;
   margin: 15rem 0;
 
-
-@supports(display: grid){
   display:grid;
+
   grid-template-columns: repeat(auto-fit, minmax( 25rem ,1fr) );
   grid-gap: 6rem;
   align-items: start;
-}
+
 
   //align-content:  space-between;
   // @media only screen and (max-width: $bp-medium){
@@ -19,15 +18,13 @@
 }
 
 .feature{
-   float: left;
-   width: 33.33333%;
-   margin-bottom: 6rem;
-   padding: .5rem;
+		float: left;
+		width: 33.33333%;
+		margin-bottom: 6rem;
+		padding: .5rem;
 
-@supports(display: grid){
-  width: auto;
-  margin-bottom: 0;
-}
+		width: auto;
+		margin-bottom: 0;
 
   //padding: 3rem;
   display:grid;
